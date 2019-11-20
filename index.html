@@ -44,32 +44,101 @@
     </style>
   </head>
   <body>
-<div class="container" style="margin-top:30px">
+<div id='Index' class='unhidden'>
+  <div class="container" style="margin-top:30px">
+      <div class="row">
+        <div class="col-sm-4">
+          <ul class="nav nav-pills flex-column">
+            <li class="nav-item">
+              <a class="nav-link" href="Thingy.html" style="color: #6f0000 !important;"><font face="Comic Sans MS">Home Page</font></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./Thingy/Introduction.html" style="color: #6f0000 !important;"><font face="Comic Sans MS">Holy Hawkanic Scripture Introduction</font></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./Thingy/Books.html" style="color: #6f0000 !important;"><font face="Comic Sans MS">The 4 Books of Hawkanity</font></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href='#' onclick="unhide(this, 'UpdateLogs'); unhide(this, 'Index'); TypeWriter();" value="unhide" style="color: #6f0000;"><font face="Comic Sans MS">Update Logs</font></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="../index.html" style="color: #6f0000 !important; font: bold !important;"><font face="Comic Sans MS">Go Back</font></a>
+            </li>
+          </ul>
+      </div>
+    </div>
+  </div>
+</div>
+<div id="UpdateLogs" class="hidden">
+  <div class="container" style="margin-top:30px">
     <div class="row">
-      <div class="col-sm-4">
-        <ul class="nav nav-pills flex-column">
-          <li class="nav-item">
-            <a class="nav-link" href="Thingy.html" style="color: #6f0000 !important;"><font face="Comic Sans MS">Home Page</font></a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="./Thingy/Introduction.html" style="color: #6f0000 !important;"><font face="Comic Sans MS">Holy Hawkanic Scripture Introduction</font></a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="./Thingy/Books.html" style="color: #6f0000 !important;"><font face="Comic Sans MS">The 4 Books of Hawkanity</font></a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="../index.html" style="color: #6f0000 !important; font: bold !important;"><font face="Comic Sans MS">Go Back</font></a>
-          </li>
-        </ul>
+      <div class="col-sm-8" style="margin-left: 30%;">
+        <h2>Update Logs</h2>
+        <!--
+        <h5>Update Log 1, November 20, 2019</h5>
+        <p><font face="Comic Sans MS" class=owo></font>  </p>
+        <br>
+        -->
+        <div class="row">
+          <div class="col-sm-8">
+            <h4 style="font-size: 25px;">Update 1, November 20, 2019</h4>
+            <p style="font-size: 17px; margin-left: 15px; color:#2f3436"><font face="Comic Sans MS"></font>Small update to the hawkanity Index<br>Added this page for updates<br>Added a secret message about something that may happen<br>Fixed a <i>small</i> html error (I had <b>&lt;/body&gt;></b> instead of <b>&lt;/body&gt;</b> so something like <b>></b> would pop up in the index)<br>Added a small edit the the "Thingy,html" folder and renamed it to "Thingy"<br>Edited all the html in the Thingy folder<br>(Later ima rename Thingy to something that fits the website but for name this is good)</p>
+            <br>
+            <!--
+            <h4 style="font-size: 25px;">Update 1, November 20, 2019</h4>
+            <p style="font-size: 17px; margin-left: 15px; color:#2f3436"><font face="Comic Sans MS"></font>Small update to the hawkanity Index<br>Added a secret message about something that may happen<br>Fixed a <i>small</i> html error (I had <b>&lt;/body&gt;></b> instead of <b>&lt;/body&gt;</b> so something like <b>></b> would pop up in the index)<br>Added a small edit the the "Thingy,html" folder and renamed it to "Thingy"<br>Edited all the html in the Thingy folder<br>(Later ima rename Thingy to something that fits the website but for name this is good)</p>
+            <br>
+            -->
+          </div>
+        </div>
+        <div class="col-sm-4" style="margin-left: -50%;">
+          <ul class="nav nav-pills flex-column">
+            <!--
+                Note: Dont add anything below this as its the "Go Back" Link/Button we dont want a new link below this
+            -->
+            <li class="nav-item">
+              <a class="nav-link" href="#" onclick="unhide(this, 'UpdateLogs'); unhide(this, 'Index');" value="unhide" style="color: #6f0000 !important; font: bold !important;"><font face="Comic Sans MS">Go Back</font></a>
+            </li>
+          </ul>
+        </div>
+      </div>
     </div>
   </div>
 </div>
 <div style="font-size: 10px; color: rgb(100, 100, 100);" class="bottomright"><font face="Comic Sans MS">Book 5 coming soon?</font></div>
 <body>
 <p id="owo"></p>
+<!--
+Script Stuff
+-->
 <script>
 document.getElementById("owo").innerHTML = "";
 </script>
 <noscript>Sorry, your browser does not support JavaScript!</noscript>
 </body>
 </html>
+<script type="text/javascript">
+  function unhide(clickedButton, divID) {
+  var item = document.getElementById(divID);
+  if (item) {
+      if(item.className=='hidden'){
+          item.className = 'unhidden' ;
+          clickedButton.value = 'hide'
+      }else{
+          item.className = 'hidden';
+          clickedButton.value = 'unhide'
+      }
+  }}
+</script>
+<!--
+Extra Style stuff
+-->
+<style>
+    .hidden{
+        display:none;
+    }
+
+    .unhidden{
+        display:block;
+    }
+</style>
